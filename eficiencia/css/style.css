@@ -1,0 +1,107 @@
+body {
+    position: relative;
+    margin: 0;
+    background: black;
+    text-align: center;
+    color: white;
+    font-family: 'Creepster', sans-serif;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translate(calc((100% - 100vw)/2));
+    z-index: -2;
+    opacity: 30%;
+}
+
+h1{
+    font-size: 75px;
+}
+
+.dgp{
+    position: relative;
+}
+
+.dgp span{
+  position: relative;
+  display: inline-block;
+  font-size: 4rem;
+  text-transform: uppercase;
+  animation: dgp 1s infinite;
+  animation-delay: calc(.1s * var(--i));  
+}
+
+@keyframes dgp {
+  0%,
+  40%,
+  100%{
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+
+}
+/*body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}*/
+
+.button{
+  background:#260024;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 20%;
+  font-family: 'Creepster', sans-serif;
+  font-size: 30px;
+}
+.button:hover{
+  background:#6f1c73;
+  color:#0000;
+}
+.button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #832155;
+  transition:400ms ease all;
+}
+.button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.form-datos{
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #260024;
+    height: 300px;
+    width: 400px;
+    font-size: 30px;
+    right: 50%; 
+    margin-top: 200px;
+    padding: 100px; 
+  }
